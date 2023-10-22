@@ -8,8 +8,8 @@ any proxies in general could be dangerous.
 It's also designed to be modified to your liking.
 
 # Setup
-First, make sure you have python installed. And install those 3 packages using pip (if you haven't already)
-Flask, waitress, python_dotenv.
+First, make sure you have python installed. And install those 4 packages using pip (if you haven't already)
+Flask, waitress, python_dotenv, requests.
 
 Now, you gotta clone this repo. Run this on your terminal to do so. `git clone https://github.com/geometrical1/anyproxy.git`
 Go to the cloned repo. And rename `.template.env` to -> `.env`
