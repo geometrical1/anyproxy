@@ -23,7 +23,7 @@ app = Flask(__name__)
 
 @app.before_request
 def access_check():
-    """Middleware to check for api key"""
+    """Middleware to check for authorization"""
     if request.headers.get("x-api-key") != api_key:
         return Response(response="Unauthorized access.", status=401)
 
