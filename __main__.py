@@ -10,8 +10,14 @@ prod_mode = os.getenv("prod") == "1"
 HOST = "0.0.0.0" if prod_mode else "127.0.0.1"
 api_key = os.getenv("api_key")
 port = os.getenv("port") or "8080"
+if prod_mode:
+    print("Production mode activated")
 if api_key is None:
     raise ValueError("Api key is undefined. Please specify an api_key in the env.")
+if api_key == "api_key_for_auth_goes_here" and prod_mode:
+    print(
+        "WARNING: Api key isn't changed. And prod_mode is set to true. Please change the api key for authentication."
+    )
 app = Flask(__name__)
 
 
